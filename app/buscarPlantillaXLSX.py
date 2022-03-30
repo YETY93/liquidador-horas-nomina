@@ -29,5 +29,5 @@ def rutaArchivoXLS():
             print("No se encontraron archivos compatibles")
 
 
-    return (PATH_PRINCIPAL+nombreArcivoXLSX)
+    return (PATH_PRINCIPAL+"/"+nombreArcivoXLSX)
 

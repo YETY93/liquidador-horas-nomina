@@ -23,9 +23,9 @@ def guardarPath(nombreArcivo: str):
     file.close()
 
 guardarPath(NOMBRE_ARCHIVO)
-"""
+
 ejecutarVirtualEnv = "nomina\\Scripts\\activate.bat &&"
-ejecutarPython = "python anlizarNomina.py"
+ejecutarPython = " cd app && Python anlizarNomina.py"
 
 comandos = ejecutarVirtualEnv + ejecutarPython
 
@@ -35,4 +35,4 @@ resultado.check_returncode()
 input("Ha finalizado la ejecución \n " +
       " Preciona (ENTER) para continuar... ")
 
-"""
+

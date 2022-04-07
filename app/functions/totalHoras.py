@@ -11,7 +11,7 @@ def diferrenciaHoras(horaInicial: time, horaFinal: time):
     horasTotales = (horaLlegada - horaSalida)
     Minutostotales = minutoLlegada - minutoEntrada
 
-# Si tras restar los minutos da un número negativo, debes sumar 60 minutos y restar 1 de las horas
+# Si tras restar los minutos da un número negativo, se suman 60 minutos y restar 1 a las horas
     if (Minutostotales < 0):
         totalMinutos = Minutostotales + 60
         minutosAdicionales = conversionMinutos(totalMinutos)

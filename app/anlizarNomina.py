@@ -21,7 +21,7 @@ try:
     contadorHojas = 0  # valor inicial debe ser 0
     while contadorHojas < len(ListHojasCalculo):
         hojaActiva = libroExcel[ListHojasCalculo[contadorHojas]]
-        contadorFila = 7  # a partir de la celda 7 estan las horas
+        contadorFila = 7  # a partir de la celda 7 se calculan las horas
         for fila in hojaActiva.iter_rows():
             filaActivaFecha = COLUMNA_FECHA + str(contadorFila)
             filaHoraEntrada = COLUMNA_HORA_ENTRADA + str(contadorFila)
@@ -39,14 +39,13 @@ try:
             elif type(valorHoraEntrada) is str or type(valorHoraSalida) is str:
                 hojaActiva[filaTotalHoras].value = "NO DATOS"
                 hojaActiva[filaTotalHoras].fill = PatternFill(patternType="solid",
-                                                              fgColor="CA4958")  # Despues debe cambiar el color a al original
+                                                              fgColor="CA4958")
             # si la celda actual es vacia se le asigna 0 al total horas
             elif valorHoraEntrada is None or valorHoraSalida is None:
                 hojaActiva[filaTotalHoras].value = 0
                 libroExcel.save(ARCHIVO_XLSX)
             else:
-                hojaActiva[filaTotalHoras].fill = PatternFill(patternType=None)  # Despues debe cambiar el color a al original
-                #print (hojaActiva[filaTotalHoras].fill)
+                hojaActiva[filaTotalHoras].fill = PatternFill(patternType=None)  # Quita el fondo de la celda
                 # se emplea el metodo diferrenciaHoras del modulo totalHoras
                 cantidaHoras = totalHoras.diferrenciaHoras(valorHoraEntrada, valorHoraSalida)
                 print("valorHoraEntrada: ", valorHoraEntrada, " valorHoraSalida: ", valorHoraSalida, " Total Horas: ",

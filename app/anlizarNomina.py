@@ -62,7 +62,7 @@ try:
                 # Agrega un estilo al la celda de la fecha
                 if (tipo_dias_descuento.tipoDia(valorFecha) == "FIN_SEM_DOMINGO" or
                         tipo_dias_descuento.tipoDia(valorFecha) == "FESTIVO"):
-                    hojaActiva[celdaActivaFecha].fill =  PatternFill(patternType="solid",
+                    hojaActiva[celdaActivaFecha].fill = PatternFill(patternType="solid",
                                                               fgColor="CA4958")
                     hojaActiva[celdaActivaFecha].font = Font(name="Arial", bold=True, color='212120')
                 # guarda los cambios

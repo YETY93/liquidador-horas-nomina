@@ -32,7 +32,7 @@ def tipoDia(fecha: datetime):
     if festivo:
         tiposDia = tiposDia[2]
     elif fecha == 6:
-        tiposDia =  tiposDia[0]
+        tiposDia = tiposDia[0]
     elif fecha == 7:
         tiposDia = tiposDia[1]
     else:
